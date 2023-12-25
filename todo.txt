@@ -1,0 +1,8 @@
+1. tidy up imports with requirements.txt
+2. create dash app
+3. refine openai outputs
+4. connect with langchain package if I want to submit the project for the plotly community challenge
+5. create dash app with charts that match what is currently on ubcgrades.com
+6. find/make a chatgpt interface on dash (maybe prompt at the bottom like chat.openai.com) - maybe https://community.plotly.com/t/chatbox-scrolling-bar/78389 ?
+7. improve markdown on ipynb file
+8. move helper functions to another py file (utils, helpers, etc)

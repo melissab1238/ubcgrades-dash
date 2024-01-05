@@ -1,3 +1,4 @@
 .env
 pandasai.log
 cache*
+.DS_Store

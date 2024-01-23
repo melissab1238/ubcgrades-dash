@@ -8,25 +8,31 @@ From the [ubcgrades.com API](https://ubcgrades.com/api-reference/v3), I can rece
 For example
 `https://ubcgrades.com/api/v3/grades/UBCV/2022S`
 
-
-## !IN DEVELOPMENT!
+## IN DEVELOPMENT
 see [my playground jupyter notebook](playground2.ipynb) for current progress
 
-## Screenshot
-![Example output](screenshots/Sample_bar_graph.png "Title")
+## Screenshots
+![Example output 1](screenshots/Sample_bar_graph.png "Title")
+![Example output 2](screenshots/cpsc210screenshot.png "Title")
 
 ## Future developments
 - [x] tidy up imports with requirements.txt
 - [x] create a dash app mvp
-- [ ] showcase plotly charts in screenshots
+- [x] showcase sample plotly charts in screenshots
 - [x] refine openai outputs
 - [x] create dash app with charts that match what is currently on ubcgrades.com
 - [ ] find/make a chatgpt interface on dash
 - [ ] improve markdown on ipynb file
 - [x] separate out helper functions
-- [ ] improve UI of charts
-- [ ] connect with local database (probably SQLite to start)
+- [x] improve UI of charts
 - [ ] host application and database and functions on the cloud. Ex: GCP Cloud Run, Cloud Store, Cloud Functions. Or Render.com. Docker image would be great too.
+
+## Curent priorities
+- [ ] filter dropdowns
+- [ ] show "OVERALL" section by defaul
+- [ ] year x axis only has 3 options 2021, 2022, 2023. Not 2021.5
+- [ ] capitalize labels (axis, legend)
+- [ ] give larger marker to the "OVERALL" vs the sections - not sure if this is possible (conditional markers)
 
 ## Questions I'd like to be able to answer
 - SELECT campus, subject, course where average > 90

@@ -2,3 +2,4 @@
 pandasai.log
 cache*
 .DS_Store
+exports/

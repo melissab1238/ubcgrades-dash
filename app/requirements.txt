@@ -3,6 +3,7 @@ openai==0.28.0
 pandas==1.5.3
 pandasai==1.5.11
 plotly==5.18.0
+pyarrow==15.0.0
 requests==2.22.0
 session_info==1.0.0
 sqldf==0.4.2

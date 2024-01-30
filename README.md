@@ -1,6 +1,5 @@
 # UBC Grades - Dash
-Building off of the original incredible [ubcgrades.com](ubcgrades.com) project, I am utilizing [Plotly's Dash](dash.plotly.com) system to analyze and visualize UBC grade data.
-Additionally, I am utilizing genAI and data analysis with OpenAI and pandasai.
+Building off of the original incredible [ubcgrades.com](ubcgrades.com) project, I am utilizing [Plotly's Dash](dash.plotly.com) system to analyze and visualize UBC grade data with less code.
 
 ## Data sources
 From the [ubcgrades.com API](https://ubcgrades.com/api-reference/v3), I can receive grades distributions as json objects, then transform them into dataframes for python and plotly to manage.
@@ -8,11 +7,50 @@ From the [ubcgrades.com API](https://ubcgrades.com/api-reference/v3), I can rece
 For example
 `https://ubcgrades.com/api/v3/grades/UBCV/2022S`
 
-## IN DEVELOPMENT
+## Docker-dash
+Instructions from [docker-dash](https://github.com/yaojiach/docker-dash/blob/main/README.md)...
+### Build and run
+
+`prod` version is served by `gunicorn` instead of the `flask` dev server.
+
+```sh
+# dev
+docker build -f Dockerfile.dev -t ubcdash-dev .
+docker run -p 8050:8050 -v "$(pwd)"/app:/app --rm ubcdash-dev
+
+# prod
+docker build -f Dockerfile -t ubcdash-prod .
+docker run -p 8050:8050 -v "$(pwd)"/app:/app --rm ubcdash-prod
+```
+### Access the page
+
+Go to `http://localhost:8050` in browser.
+
+### Switch debug mode in Dockerfile
+
+```dockerfile
+ENV DASH_DEBUG_MODE True # False
+```
+
+### Development
+
+Install the app requirements for development to get better editor support.
+
+```sh
+poetry install
+```
+
+Optional: clean initialization of `poetry`:
+
+```sh
+poetry init
+cat app/requirements.txt | xargs poetry add
+```
+
+## Playground jupyter notebook
 see [my playground jupyter notebook](playground2.ipynb) for current progress
 
 ## Screenshots
-![Example output 1](screenshots/Sample_bar_graph.png "Title")
 ![Example output 2](screenshots/cpsc210screenshot.png "Title")
 
 ## Future developments
